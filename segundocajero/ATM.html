@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgba(112,199,220,255)">
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg bg-light" style="height:100px;">
+        <div class="container-fluid" style="background-color:rgba(112,199,220,255);">
+            <img class="banco" src="/Captura de Pantalla 2022-09-15 a la(s) 19.43.06.png" alt="Imagen del banco"
+                style="height:100px ;">
+            <h2>Banco Nacional <br> De Alderlush</h2>
+            <h1>ATM</h1>
+        </div>
+    </nav>
+
+<!-- Titulo -->
+
+    <div class="container" id="title" style="height: 100px ; text-align: center; padding-top: 40px; padding-left: 40px;">
+        <h2> Buenos días!.</h2>
+    </div>
+
+<!-- Formulario -->
+
+    <div class="container d-flex flex-row mt-5" id="formulario">
+
+        <select class="form-select" id="select" aria-label="Default select example">
+            <option selected>Selecciona tu usuario</option>
+            <option value="0" id="Mali">Mali</option>
+            <option value="1" id="Gera">Gera</option>
+            <option value="2" id="Maui">Maui</option>
+            <option value="3" id="Amador">Amador</option>
+            <option value="4" id="Gerardo">Gerardo</option>
+            <option value="5" id="Judy">Judy</option>
+            <option id="ninguno">Ninguno de los anteriores</option>
+          
+        </select>
+
+    </div>
+
+    <div class="mt-5 p-3 ms-5" id="passwords" style="display:none;">
+
+        <input  type="password"  id="password" maxlength="4" style="width: 30%; margin-left:35px; margin-right: 10px; " placeholder="ingresa contraseña">
+        <button type="button" class="reset btn btn-primary " style="height: 35px;" onclick="window.location.reload()">Regresa</button>
+        <button type="button"  class="validar btn btn-primary ms-3" style="height: 35px;">validar</button>
+
+    </div>
+
+
+<div class="col-6" id="nuevoUsuario" style="display: none; flex-direction: column; margin-top: 100px; margin-left: 100px;">
+    
+ 
+    <input type="text" id="newUser" placeholder="Como te llamas?" >
+
+    <input type="number" id="newFouds" placeholder="Ingresa monto de 10 a 990" style="margin-top: 20px;">
+    <input type="text" pattern="[0-9]+" id="newPassword" placeholder="Crea una contraseña?" style="margin-top: 20px;">
+    <button type="button" class="create btn btn-primary" style="margin-top: 20px;">Crear Nuevo Usuario</button>
+   
+
+</div>
+
+
+<!-- Movimientos -->
+
+
+    <div class="col" id="movimientos" style="display: none ;" >
+        <button type="button" class="consultar btn btn-primary" onclick= "verifyFounds()" style=" margin-left:450px;">Consultar fondos</button>
+        <button type="button" class="ingresar btn btn-primary" onclick="addFoundsDisplay()" style=" margin-left: 50px;">Ingresar fondos</button>
+    </div>
+
+        <div class="col" id="movimientos2" style="display: none; ">
+        <button type="button" class="retirar btn btn-primary" onclick="takeFoundsDisplay()" style="margin-left: 450px">Retirar fondos</button>
+        <button type="button" class="Cancelar btn btn-primary " style="margin-left: 100px;" onclick="window.location.reload()">Cancelar</button> 
+    </div>
+    
+
+    <!-- boton de regreso  -->
+
+ <div class="col" id="return" style="display: none;">
+ <button type="button" class="return btn btn-primary" onclick= "displayMovements()" style="margin-left: 250px;"> Regresar</button>
+</div>
+
+<!-- Ingresar fondos -->
+
+<div class="col" id="addup" style="display:none;">
+<label for="addFounds">Cuanto deseas ingresar?</label>
+<input type="number" id="addFounds" onclick="" width="30%" max="990" min="1" >
+<button type="button" class="btn btn-primary" onclick= "addFounds()" style="margin-left: 50px;"> Ingresar</button>
+</div>
+
+<!-- Retirar Fondos -->
+
+<div class="col" id="take" style="display:none;">
+    <label for="takeFounds">Cuanto deseas retirar?</label>
+<input type="number" id="takeFounds" onclick="" width="30%" max="990" min="1" >
+<button type="button" class="btn btn-primary" onclick= "takeFounds()" style="margin-left: 50px;"> Retirar</button>
+</div>
+
+    <script src="./ATM.js"></script>
+</body>
+
+</html>
