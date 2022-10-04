@@ -30,8 +30,8 @@ let counts = [
         "password": 4808
     }
 ];
-
-
+let newFounds = null
+let user = null
 const form = document.getElementById("formulario")
 let users = document.querySelector("select")
 let validar = document.querySelector(".validar")
@@ -77,12 +77,19 @@ function createNewUser() {
     newOption.text = document.getElementById("newUser").value;
     document.getElementById("ninguno").innerHTML = newOption.textContent
     valueChange.value = 6
-    nuevoUsuario = {
-        "name": newOption.textContent,
-        "money": Number(document.getElementById("newFouds").value),
-        "password": Number(document.getElementById("newPassword").value),
+    newFounds = Number(document.getElementById("newFounds").value)
+    if (newFounds < 991 && newFounds > 9) {
+        nuevoUsuario = {
+            "name": newOption.textContent,
+            "money": Number(document.getElementById("newFounds").value),
+            "password": Number(document.getElementById("newPassword").value),
+        }
+        counts.push(nuevoUsuario)
     }
-    counts.push(nuevoUsuario)
+    else {
+        alert('recuerada que solo puedes ingresar entre 10 y 990 pesoss')
+        window.location.reload()
+    }
 }
 
 // Función para verificar la contraseña
