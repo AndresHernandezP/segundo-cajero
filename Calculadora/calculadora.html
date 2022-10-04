@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container border d-flex flex-column" id="pantalla"
+        style=" height:100px ; background-color: gainsboro;width: 29%;margin-left: 240px;">
+        <span id="digito">_</span>
+        <span id="operadores"></span>
+        <span id="digito2"></span>
+    </div>
+
+    <div class="col" style="padding-left: 250px; padding-top:14px" id="numeros">
+
+        <div class="row">
+
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="7" id="7">7</button>
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="8" id="8">8</button>
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="9" id="9">9</button>
+            <button type="button" class="operador btn btn-success m-1" style="width:60px;" id="+">+</button>
+            <button type="button" class="operador btn btn-danger m-1" style="width:60px;" id="-">-</button>
+
+        </div>
+
+        <div class="row">
+
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="4" id="4">4</button>
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="5" id="5">5</button>
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="6" id="6">6</button>
+            <button type="button" class="operador btn btn-warning m-1" style="width:60px;" id="*">*</button>
+            <button type="button" class="operador btn btn-primary m-1" style="width:60px;" id="/">/</button>
+
+        </div>
+
+        <div class="row">
+
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="1" id="1">1</button>
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="2" id="2">2</button>
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="3" id="3">3</button>
+            <button type="button" class="operador btn btn-info m-1" style="width:60px;" id="%">%</button>
+            <button type="button" onclick="invertir()" class="btn btn-light m-1" style="width:60px;"
+                id="+/-">+/-</button>
+        </div>
+
+
+        <div class="row">
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px;" value="0" id="0">0</button>
+            <button type="button" class="digito btn btn-dark m-1" style="width:60px; height: 40px;" value="."
+                id=".">.</button>
+            <button type="button" onclick="submit()" class="submit btn btn-dark m-1" style="width:60px;"
+                id="=">=</button>
+            <button type="button" onclick="del()" class="btn btn-dark m-1" style="width:60px;" id="<-">
+                del</button>
+            <button type="button" onclick="window.location.reload();" class="btn btn-secondary m-1" style="width:60px;"
+                id="reset">AC</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="calculadora.js"></script>
+</body>
+
+</html>
