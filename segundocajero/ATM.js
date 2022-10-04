@@ -35,14 +35,8 @@ let counts = [
 const form = document.getElementById("formulario")
 let users = document.querySelector("select")
 let validar = document.querySelector(".validar")
-let password = null
-let user = null
-let nuevoUsuario = null
 const newUser = document.querySelector(".create")
 let valueChange = document.getElementById("ninguno")
-
-
-
 
 
 users.addEventListener('change', displayPassword)
@@ -89,7 +83,6 @@ function createNewUser() {
         "password": Number(document.getElementById("newPassword").value),
     }
     counts.push(nuevoUsuario)
-
 }
 
 // Función para verificar la contraseña
@@ -133,7 +126,6 @@ function addFounds() {
 }
 
 // Funciones para Retirar fondos
-
 
 function takeFoundsDisplay() {
     document.getElementById("title").innerHTML = document.getElementById("take").innerHTML

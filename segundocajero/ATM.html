@@ -57,13 +57,14 @@
 
     </div>
 
+<!-- Nuevo usuario-->
 
 <div class="col-6" id="nuevoUsuario" style="display: none; flex-direction: column; margin-top: 100px; margin-left: 100px;">
     
  
     <input type="text" id="newUser" placeholder="Como te llamas?" >
 
-    <input type="number" id="newFouds" placeholder="Ingresa monto de 10 a 990" style="margin-top: 20px;">
+    <input type="number" id="newFouds" placeholder="Ingresa monto de 10 a 990" min="10" max="990" style="margin-top: 20px;">
     <input type="text" pattern="[0-9]+" id="newPassword" placeholder="Crea una contraseña?" style="margin-top: 20px;">
     <button type="button" class="create btn btn-primary" style="margin-top: 20px;">Crear Nuevo Usuario</button>
    
